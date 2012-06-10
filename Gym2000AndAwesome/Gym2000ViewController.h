@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ExerciseDataController.h"
 
-@interface Gym2000ViewController : UIViewController
+@interface Gym2000ViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
+    UIPickerView *exercise;
+    NSArray *exercises;
+    NSArray *reps;
+    NSArray *bodyPart;
+}
+
+@property (strong, nonatomic) ExerciseDataController *dataController;
+//@property (nonatomic, strong) IBOutlet UIPickerView *exercise;
 
 @end
