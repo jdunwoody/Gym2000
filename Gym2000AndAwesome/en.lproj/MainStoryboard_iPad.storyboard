@@ -494,27 +494,11 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <pickerView tag="1" contentMode="scaleToFill" id="Vj9-ag-gkr">
-                                            <rect key="frame" x="94" y="3" width="181" height="216"/>
+                                            <rect key="frame" x="94" y="3" width="408" height="216"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <outlet property="dataSource" destination="P13-3z-SJE" id="DJ0-eX-CDm"/>
                                                 <outlet property="delegate" destination="P13-3z-SJE" id="Mcv-S4-9ft"/>
-                                            </connections>
-                                        </pickerView>
-                                        <pickerView tag="2" contentMode="scaleToFill" id="7Nb-5a-eJJ">
-                                            <rect key="frame" x="277" y="1" width="160" height="216"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <outlet property="dataSource" destination="P13-3z-SJE" id="ciH-Vq-DSg"/>
-                                                <outlet property="delegate" destination="P13-3z-SJE" id="0GQ-K7-0JG"/>
-                                            </connections>
-                                        </pickerView>
-                                        <pickerView tag="3" contentMode="scaleToFill" id="4wx-aD-sba">
-                                            <rect key="frame" x="445" y="1" width="148" height="216"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <outlet property="dataSource" destination="P13-3z-SJE" id="qhI-M0-q1s"/>
-                                                <outlet property="delegate" destination="P13-3z-SJE" id="q8k-0j-1vY"/>
                                             </connections>
                                         </pickerView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rda-D4-eb4">
@@ -605,10 +589,8 @@
         <class className="ExerciseCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseCell.h"/>
             <relationships>
-                <relationship kind="outlet" name="bodyPartPicker" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="exerciseLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="exercisePicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="repsPicker" candidateClass="UIPickerView"/>
             </relationships>
         </class>
         <class className="Gym2000ViewController" superclassName="UITableViewController">

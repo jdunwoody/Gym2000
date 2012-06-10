@@ -12,8 +12,8 @@
 
 @synthesize exerciseLabel = _exerciseLabel;
 @synthesize exercisePicker = _exercisePicker;
-@synthesize repsPicker = _repsPicker;
-@synthesize bodyPartPicker = _bodyPartPicker;
+//@synthesize repsPicker = _repsPicker;
+//@synthesize bodyPartPicker = _bodyPartPicker;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

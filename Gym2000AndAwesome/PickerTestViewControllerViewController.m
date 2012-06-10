@@ -43,10 +43,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-
-
-
-
 // Date picker functions
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView

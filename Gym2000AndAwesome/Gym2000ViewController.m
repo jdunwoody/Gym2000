@@ -72,18 +72,20 @@
     NSString *valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
     
     [[cell exerciseLabel] setText:valueAtIndex];
-    
+
     [[cell exercisePicker] setDelegate:self];
     [[cell exercisePicker] setDataSource:self];
 
-    [[cell repsPicker] setDelegate:self];
-    [[cell repsPicker] setDataSource:self];
-
-    [[cell bodyPartPicker] setDelegate:self];
-    [[cell bodyPartPicker] setDataSource:self];
+//    [[cell repsPicker] setDelegate:self];
+//    [[cell repsPicker] setDataSource:self];
+//
+//    [[cell bodyPartPicker] setDelegate:self];
+//    [[cell bodyPartPicker] setDataSource:self];
     
     return cell;
 }
+
+// [pickerView reloadComponent]
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -95,32 +97,33 @@
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    //One column
-    return 1;
+    return 3;
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    if ([pickerView tag] == 1) {
-        return exercises.count;
-    } else if ([pickerView tag] == 2) {
-        return reps.count;
-    } else if ([pickerView tag] == 3) {
-        return bodyPart.count;
+    switch (component) {
+        case 2:
+            return bodyPart.count;
+        case 1:
+            return reps.count;
+        case 0:
+        default:
+            return exercises.count;
     }
-    return 0;
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    if ([pickerView tag] == 1) {
-        return [exercises objectAtIndex:row];
-    } else if ([pickerView tag] == 2) {
-        return [reps objectAtIndex:row];
-    } else if ([pickerView tag] == 3) {
-        return [bodyPart objectAtIndex:row];
+    switch (component) {
+        case 2:
+            return [bodyPart objectAtIndex:row];
+        case 1:
+            return [reps objectAtIndex:row];
+        case 0:
+        default:
+            return [exercises objectAtIndex:row];
     }
-    return nil;
 }
 
 @end
