@@ -117,15 +117,39 @@
 {
     switch (component) {
         case 2:
+//            return @"Body Part"; 
             return [bodyPart objectAtIndex:row];
         case 1:
-            return [reps objectAtIndex:row];
+//            return @"Reps"; 
+            return[reps objectAtIndex:row];
         case 0:
         default:
+//            return @"Exercise"; 
             return [exercises objectAtIndex:row];
     }
 }
 
+//- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+//{
+//    if (view != nil) {
+//        return view;
+//    }
+//    UIView *a,*b,*c;
+//    
+//    switch (component) {
+//        case 2:
+//            a = [bodyPart objectAtIndex:row];
+//            return [bodyPart objectAtIndex:row];
+//        case 1:
+//            b =[reps objectAtIndex:row];
+//            return [reps objectAtIndex:row];
+//        case 0:
+//        default:
+//            c= [exercises objectAtIndex:row];
+//            
+//            return [exercises objectAtIndex:row];
+//    } 
+//}
 @end
 
 
