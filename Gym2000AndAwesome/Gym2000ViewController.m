@@ -8,6 +8,7 @@
 
 #import "Gym2000ViewController.h"
 #import "ExerciseCell.h"
+#import "InactiveExerciseCell.h"
 
 @interface Gym2000ViewController ()
 
@@ -66,23 +67,51 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ExerciseCell";
-    ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    NSIndexPath *selectedIndex = [tableView indexPathForSelectedRow];
     
-    NSString *valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
-    
-    [[cell exerciseLabel] setText:valueAtIndex];
+    if (indexPath.row == 0) {
+        static NSString *CellIdentifier = @"CurrentExerciseCell";
+        ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        NSString *valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+        
+        [[cell exerciseLabel] setText:valueAtIndex];
+        
+        [[cell exercisePicker] setDelegate:self];
+        [[cell exercisePicker] setDataSource:self];
+        
+        return cell;    
+        
+    } else {
+        static NSString *CellIdentifier = @"InactiveExerciseCell";
+        InactiveExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        NSString *valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+        
+        [[cell exerciseValue] setText:valueAtIndex];
+        [[cell repsValue] setText:valueAtIndex];
+        [[cell bodyPartValue] setText:valueAtIndex];
+//        [cell sizeToFit];
+//        cell.backgroundColor = [UIColor redColor];
+//        cell.backgroundColor = [UIColor colorWithRed:172.0/255.0 green:173.0/255.0 blue:175.0/255.0 alpha:1.0];
+//        [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionTop]
+        
+//        [[cell exercisePicker] setDelegate:self];
+//        [[cell exercisePicker] setDataSource:self];
+//        
+        
+        return cell;
+    }
+}
 
-    [[cell exercisePicker] setDelegate:self];
-    [[cell exercisePicker] setDataSource:self];
-
-//    [[cell repsPicker] setDelegate:self];
-//    [[cell repsPicker] setDataSource:self];
-//
-//    [[cell bodyPartPicker] setDelegate:self];
-//    [[cell bodyPartPicker] setDataSource:self];
-    
-    return cell;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+    if (indexPath.row == 0) {
+        return tableView.rowHeight;
+    } else {
+        return 62;
+    }
+        
 }
 
 // [pickerView reloadComponent]

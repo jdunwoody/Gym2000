@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A47A0901585DF3F00203A81 /* InactiveExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A47A08F1585DF3F00203A81 /* InactiveExerciseCell.m */; };
 		1ADE90C615846FC2005B0AF1 /* PickerTestViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90C515846FC2005B0AF1 /* PickerTestViewControllerViewController.m */; };
 		1ADE90CE15847A2E005B0AF1 /* ExerciseDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90CD15847A2E005B0AF1 /* ExerciseDataController.m */; };
 		1ADE90D515849FA3005B0AF1 /* ExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90D415849FA3005B0AF1 /* ExerciseCell.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A47A08E1585DF3F00203A81 /* InactiveExerciseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; path = InactiveExerciseCell.h; sourceTree = "<group>"; };
+		1A47A08F1585DF3F00203A81 /* InactiveExerciseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InactiveExerciseCell.m; sourceTree = "<group>"; };
 		1ADE90C415846FC2005B0AF1 /* PickerTestViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTestViewControllerViewController.h; sourceTree = "<group>"; };
 		1ADE90C515846FC2005B0AF1 /* PickerTestViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTestViewControllerViewController.m; sourceTree = "<group>"; };
 		1ADE90CC15847A2E005B0AF1 /* ExerciseDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseDataController.h; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 				1ADE90CD15847A2E005B0AF1 /* ExerciseDataController.m */,
 				1ADE90D315849FA3005B0AF1 /* ExerciseCell.h */,
 				1ADE90D415849FA3005B0AF1 /* ExerciseCell.m */,
+				1A47A08E1585DF3F00203A81 /* InactiveExerciseCell.h */,
+				1A47A08F1585DF3F00203A81 /* InactiveExerciseCell.m */,
 			);
 			path = Gym2000AndAwesome;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				1ADE90C615846FC2005B0AF1 /* PickerTestViewControllerViewController.m in Sources */,
 				1ADE90CE15847A2E005B0AF1 /* ExerciseDataController.m in Sources */,
 				1ADE90D515849FA3005B0AF1 /* ExerciseCell.m in Sources */,
+				1A47A0901585DF3F00203A81 /* InactiveExerciseCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
