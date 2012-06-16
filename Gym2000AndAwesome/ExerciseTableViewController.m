@@ -10,7 +10,7 @@
 #import "ExerciseCell.h"
 #import "InactiveExerciseCell.h"
 #import "Exercise.h"
-#import "PickerTestViewController.h"
+#import "AddExerciseViewController.h"
 
 @interface ExerciseTableViewController ()
 
@@ -25,8 +25,8 @@
 {
     [super viewDidLoad];
 
-    self.slideNavigationViewController.delegate = self;
-    self.slideNavigationViewController.dataSource = self;
+//    self.slideNavigationViewController.delegate = self;
+//    self.slideNavigationViewController.dataSource = self;
 
 //    self.slideNavigationController.panEnabled = YES;
     
@@ -205,7 +205,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
 {
     if ([segue.identifier isEqualToString:@"AddExercise"]) {
-        
+        AddExerciseViewController *destination = (AddExerciseViewController *)segue.destinationViewController;
+
+        destination.addExerciseViewControllerDelegate = self;
 //        PickerTestViewController *asker = (PickerTestViewController *) segue.destinationViewController;
 //        asker.delegate = self;
         
@@ -216,6 +218,7 @@
         
     }
 
+    
 //    
 //    NSUInteger row = indexPath.row;
 //    if (row != NSNotFound)
@@ -228,6 +231,11 @@
 //                                               animated:YES];
 //    }
     
+}
+
+- (void)addItemViewController:(AddExerciseViewController *)controller didFinishEnteringItem:(NSString *)item
+{
+    NSLog(@"This was returned from AddExerciseViewController %@",item);
 }
 
 @end

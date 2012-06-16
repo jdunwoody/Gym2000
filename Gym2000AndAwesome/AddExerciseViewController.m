@@ -6,16 +6,16 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "PickerTestViewController.h"
+#import "AddExerciseViewController.h"
 
-@interface PickerTestViewController ()
+@interface AddExerciseViewController ()
 
 @end
 
-@implementation PickerTestViewController
+@implementation AddExerciseViewController
+@synthesize addExerciseViewControllerDelegate = _addExerciseViewControllerDelegate;
 
 @synthesize status = _status;
-@synthesize addExerciseButton = _addExerciseButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,18 +36,16 @@
     statusValues = [[NSArray alloc] initWithObjects:@"Employed", @"Student", @"Retired", @"Homemaker", @"Self-employed", @"Unemployed", @"Other", nil];
 }
 
-//- (void)addExerciseButtonPressed
-//{
 //    [UIView beginAnimations:nil context:NULL]; 
-//    
-//    [UIView setAnimationDuration: 0.7];
-//    [UIView setAnimationTransition:<#UIViewAnimationTransitionCurlDown#> forView:self.navigationController.view cache:NO];
-//    
-//    
-//    [self.navigationController popViewControllerAnimated:YES];
-//
-//     [UIView commitAnimations];
-//}
+////    
+////    [UIView setAnimationDuration: 0.7];
+////    [UIView setAnimationTransition:<#UIViewAnimationTransitionCurlDown#> forView:self.navigationController.view cache:NO];
+////    
+////    
+////    [self.navigationController popViewControllerAnimated:YES];
+////
+////     [UIView commitAnimations];
+
 
 - (void)viewDidUnload
 {
@@ -85,4 +83,10 @@
     return nil;
 }
 
+- (IBAction)addExerciseButton:(id)sender {
+    NSString *itemToPassBack = @"Pass this value back to ExerciseTableViewController";
+    [self.addExerciseViewControllerDelegate addItemViewController:self didFinishEnteringItem:itemToPassBack];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

@@ -11,7 +11,7 @@
 		1A47A0901585DF3F00203A81 /* InactiveExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A47A08F1585DF3F00203A81 /* InactiveExerciseCell.m */; };
 		1AACE9F0158760C800B9B2DF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AACE9EE158760C800B9B2DF /* MainStoryboard_iPad.storyboard */; };
 		1ABEF4F6158C0EA700BBD092 /* MWFSlideNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEF4F5158C0EA700BBD092 /* MWFSlideNavigationViewController.m */; };
-		1ADE90C615846FC2005B0AF1 /* PickerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90C515846FC2005B0AF1 /* PickerTestViewController.m */; };
+		1ADE90C615846FC2005B0AF1 /* AddExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90C515846FC2005B0AF1 /* AddExerciseViewController.m */; };
 		1ADE90CE15847A2E005B0AF1 /* ExerciseDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90CD15847A2E005B0AF1 /* ExerciseDataController.m */; };
 		1ADE90D515849FA3005B0AF1 /* ExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90D415849FA3005B0AF1 /* ExerciseCell.m */; };
 		1AF3455615835B7700EB1EA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF3455515835B7700EB1EA5 /* UIKit.framework */; };
@@ -34,8 +34,8 @@
 		1AACE9EF158760C800B9B2DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		1ABEF4F4158C0EA700BBD092 /* MWFSlideNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFSlideNavigationViewController.h; sourceTree = "<group>"; };
 		1ABEF4F5158C0EA700BBD092 /* MWFSlideNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFSlideNavigationViewController.m; sourceTree = "<group>"; };
-		1ADE90C415846FC2005B0AF1 /* PickerTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTestViewController.h; sourceTree = "<group>"; };
-		1ADE90C515846FC2005B0AF1 /* PickerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTestViewController.m; sourceTree = "<group>"; };
+		1ADE90C415846FC2005B0AF1 /* AddExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExerciseViewController.h; sourceTree = "<group>"; };
+		1ADE90C515846FC2005B0AF1 /* AddExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExerciseViewController.m; sourceTree = "<group>"; };
 		1ADE90CC15847A2E005B0AF1 /* ExerciseDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseDataController.h; sourceTree = "<group>"; };
 		1ADE90CD15847A2E005B0AF1 /* ExerciseDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDataController.m; sourceTree = "<group>"; };
 		1ADE90D315849FA3005B0AF1 /* ExerciseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseCell.h; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 				1AF3456D15835B7800EB1EA5 /* ExerciseTableViewController.h */,
 				1AF3456E15835B7800EB1EA5 /* ExerciseTableViewController.m */,
 				1AF3455C15835B7700EB1EA5 /* Supporting Files */,
-				1ADE90C415846FC2005B0AF1 /* PickerTestViewController.h */,
-				1ADE90C515846FC2005B0AF1 /* PickerTestViewController.m */,
+				1ADE90C415846FC2005B0AF1 /* AddExerciseViewController.h */,
+				1ADE90C515846FC2005B0AF1 /* AddExerciseViewController.m */,
 				1ADE90CC15847A2E005B0AF1 /* ExerciseDataController.h */,
 				1ADE90CD15847A2E005B0AF1 /* ExerciseDataController.m */,
 				1ADE90D315849FA3005B0AF1 /* ExerciseCell.h */,
@@ -208,7 +208,7 @@
 				1AF3456215835B7700EB1EA5 /* main.m in Sources */,
 				1AF3456615835B7700EB1EA5 /* Gym2000AppDelegate.m in Sources */,
 				1AF3456F15835B7800EB1EA5 /* ExerciseTableViewController.m in Sources */,
-				1ADE90C615846FC2005B0AF1 /* PickerTestViewController.m in Sources */,
+				1ADE90C615846FC2005B0AF1 /* AddExerciseViewController.m in Sources */,
 				1ADE90CE15847A2E005B0AF1 /* ExerciseDataController.m in Sources */,
 				1ADE90D515849FA3005B0AF1 /* ExerciseCell.m in Sources */,
 				1A47A0901585DF3F00203A81 /* InactiveExerciseCell.m in Sources */,

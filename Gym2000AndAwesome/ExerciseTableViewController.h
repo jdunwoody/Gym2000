@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ExerciseDataController.h"
-#import "MWFSlideNavigationViewController.h"
+#import "AddExerciseViewController.h"
 
-@interface ExerciseTableViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate, MWFSlideNavigationViewControllerDelegate, MWFSlideNavigationViewControllerDataSource> {
+@interface ExerciseTableViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate, AddExerciseViewControllerDelegate> {
     UIPickerView *exercisePicker;
     NSArray *exercises;
     NSArray *reps;
@@ -21,3 +21,6 @@
 //@property (nonatomic, strong) IBOutlet UIPickerView *exercise;
 
 @end
+
+
+//}, MWFSlideNavigationViewControllerDelegate, MWFSlideNavigationViewControllerDataSource> {

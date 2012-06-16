@@ -47,9 +47,7 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <segue destination="yRt-1D-6uh" kind="popover" identifier="AddExercise" popoverAnchorView="WFQ-Ey-1mB" id="PS5-6c-XnJ">
-                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                        </segue>
+                                        <segue destination="yRt-1D-6uh" kind="push" identifier="AddExercise" id="PS5-6c-XnJ"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -141,13 +139,13 @@
             </objects>
             <point key="canvasLocation" x="-1309" y="-855"/>
         </scene>
-        <!--Picker Test View Controller-->
+        <!--Add Exercise View Controller-->
         <scene sceneID="Kad-B1-ckI">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9h-m9-H8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController modalPresentationStyle="formSheet" id="yRt-1D-6uh" customClass="PickerTestViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="yRt-1D-6uh" customClass="AddExerciseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aeb-GQ-8vP">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="748"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="660"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Exercise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Z7w-3d-oA4">
@@ -163,8 +161,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="27r-or-Iod">
-                                <rect key="frame" x="288" y="228" width="72" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7N7-j5-ALN">
+                                <rect key="frame" x="288" y="222" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Add">
@@ -174,6 +172,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addExerciseButton:" destination="yRt-1D-6uh" eventType="touchUpInside" id="Vft-nQ-h5Q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -185,6 +186,27 @@
             <point key="canvasLocation" x="-111" y="-855"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AddExerciseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddExerciseViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addExerciseButton:"/>
+                <relationship kind="outlet" name="status" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="ExerciseTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseTableViewController.h"/>
+        </class>
+        <class className="InactiveExerciseCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InactiveExerciseCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bodyPart" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="category" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="reps" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>

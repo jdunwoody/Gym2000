@@ -125,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Gym2000AndAwesome/ExerciseDataController.m"
-         timestampString = "361542919.355826"
+         timestampString = "361543310.489177"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "61"
-         endingLineNumber = "61"
+         startingLineNumber = "60"
+         endingLineNumber = "60"
          landmarkName = "-objectInListAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -229,7 +229,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Gym2000AndAwesome/ExerciseTableViewController.m"
-         timestampString = "361541201.372718"
+         timestampString = "361543310.489177"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "203"
@@ -300,6 +300,45 @@
          startingLineNumber = "37"
          endingLineNumber = "37"
          landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Gym2000AndAwesome/ExerciseTableViewController.m"
+         timestampString = "361548209.983075"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "238"
+         endingLineNumber = "238"
+         landmarkName = "-addItemViewController:didFinishEnteringItem:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Gym2000AndAwesome/AddExerciseViewController.m"
+         timestampString = "361547834.673343"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "87"
+         endingLineNumber = "87"
+         landmarkName = "-addExerciseButton:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Gym2000AndAwesome/ExerciseTableViewController.m"
+         timestampString = "361547983.47393"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "207"
+         endingLineNumber = "207"
+         landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
