@@ -7,8 +7,10 @@
 //
 
 #import "Gym2000AppDelegate.h"
-#import "Gym2000ViewController.h"
+#import "ExerciseTableViewController.h"
 #import "ExerciseDataController.h"
+#import "MainViewController.h"
+#import "MWFSlideNavigationViewController.h"
 
 @implementation Gym2000AppDelegate
 
@@ -18,12 +20,12 @@
 {
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     
-    Gym2000ViewController *firstViewController = (Gym2000ViewController *)[[navigationController viewControllers] objectAtIndex:0];
     ExerciseDataController *aDataController = [[ExerciseDataController alloc] init];
+    ExerciseTableViewController *rootViewController = (ExerciseTableViewController *)[[navigationController viewControllers] objectAtIndex:0];
+
+    rootViewController.dataController = aDataController;
     
-    firstViewController.dataController = aDataController;
-    
-    
+    //MWFSlideNavigationViewController *ctl = [[MWFSlideNavigationViewController alloc] initWithRootViewController:rootViewController];
     
     // Override point for customization after application launch.
     return YES;

@@ -10,8 +10,9 @@
 
 @interface InactiveExerciseCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UILabel *exerciseValue;
-@property (nonatomic, strong) IBOutlet UILabel *repsValue;
-@property (nonatomic, strong) IBOutlet UILabel *bodyPartValue;
+@property (nonatomic, strong) IBOutlet UILabel *category;
+@property (nonatomic, strong) IBOutlet UILabel *name;
+@property (nonatomic, strong) IBOutlet UILabel *reps;
+@property (nonatomic, strong) IBOutlet UILabel *bodyPart;
 
 @end

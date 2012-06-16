@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Exercise.h"
 
 @interface ExerciseDataController : NSObject
 
@@ -14,6 +15,6 @@
 
 -(NSUInteger) countOfList;
 
--(NSString *) objectInListAtIndex:(NSUInteger)theIndex;
+-(Exercise *) objectInListAtIndex:(NSUInteger)theIndex;
 
 @end

@@ -6,15 +6,16 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "PickerTestViewControllerViewController.h"
+#import "PickerTestViewController.h"
 
-@interface PickerTestViewControllerViewController ()
+@interface PickerTestViewController ()
 
 @end
 
-@implementation PickerTestViewControllerViewController
+@implementation PickerTestViewController
 
 @synthesize status = _status;
+@synthesize addExerciseButton = _addExerciseButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,8 +30,24 @@
 {
     [super viewDidLoad];
     
+//    self.answerTextField.delegate = self;
+//    [_addExerciseButton addTarget:self action:@selector(addExerciseButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    
     statusValues = [[NSArray alloc] initWithObjects:@"Employed", @"Student", @"Retired", @"Homemaker", @"Self-employed", @"Unemployed", @"Other", nil];
 }
+
+//- (void)addExerciseButtonPressed
+//{
+//    [UIView beginAnimations:nil context:NULL]; 
+//    
+//    [UIView setAnimationDuration: 0.7];
+//    [UIView setAnimationTransition:<#UIViewAnimationTransitionCurlDown#> forView:self.navigationController.view cache:NO];
+//    
+//    
+//    [self.navigationController popViewControllerAnimated:YES];
+//
+//     [UIView commitAnimations];
+//}
 
 - (void)viewDidUnload
 {
@@ -42,6 +59,7 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 // Date picker functions
 

@@ -7,6 +7,7 @@
 //
 
 #import "ExerciseDataController.h"
+#import "Exercise.h"
 
 @implementation ExerciseDataController
 
@@ -20,8 +21,27 @@
 }
 
 - (void)initializeDefaultDataList {
-    NSMutableArray *exerciseList = [[NSMutableArray alloc] initWithObjects:@"Push up", @"Sit up", @"Burpee", @"Star jump", @"Bicup curls", @"Squats", @"Other", nil];
-    self.exercises = exerciseList;
+    
+    self.exercises = [[NSMutableArray alloc] init];
+    
+    Exercise *exercise = [[Exercise alloc] init];
+    exercise.category = @"Individual";
+    exercise.name = @"Air Squat";
+    [self.exercises addObject:exercise];
+   
+    exercise = [[Exercise alloc] init];
+    exercise.category = @"Super set";
+    exercise.name = @"Push up";
+    [self.exercises addObject:exercise];
+    
+    
+//    NSMutableArray *exerciseList = [[NSMutableArray alloc] initWithObjects:@"Push up", @"Sit up", @"Burpee", @"Star jump", @"Bicup curls", @"Squats", @"Other", nil];
+//    self.exercises = exerciseList;
+  
+//    NSMutableArray *exerciseList = [[NSMutableArray alloc] init];
+//  
+//    [exerciseList addObject: [Exercise in
+//    self.exercises = exerciseList;
     
 //    [self.exercises addObject: @"Push up", @"Sit up", @"Burpee", @"Star jump", @"Bicup curls", @"Squats", @"Other"];
 }
@@ -36,7 +56,7 @@
     return [self.exercises count];
 }
 
-- (NSString *)objectInListAtIndex:(NSUInteger)theIndex {
+- (Exercise *)objectInListAtIndex:(NSUInteger)theIndex {
     return [self.exercises objectAtIndex:theIndex];
 }
 

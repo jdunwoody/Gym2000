@@ -10,8 +10,25 @@
 
 @implementation InactiveExerciseCell
 
-@synthesize exerciseValue = _exerciseValue;
-@synthesize repsValue = _repsValue;
-@synthesize bodyPartValue = _bodyPartValue;
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
+
+@synthesize category = _category;
+@synthesize name = name;
+@synthesize reps = _reps;
+@synthesize bodyPart = _bodyPart;
 
 @end

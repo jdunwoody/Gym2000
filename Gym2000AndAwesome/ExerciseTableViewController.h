@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "ExerciseDataController.h"
+#import "MWFSlideNavigationViewController.h"
 
-@interface Gym2000ViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
-    UIPickerView *exercise;
+@interface ExerciseTableViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate, MWFSlideNavigationViewControllerDelegate, MWFSlideNavigationViewControllerDataSource> {
+    UIPickerView *exercisePicker;
     NSArray *exercises;
     NSArray *reps;
     NSArray *bodyPart;

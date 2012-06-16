@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PickerTestViewControllerViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+@interface PickerTestViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
     UIPickerView *status;   
     NSArray *statusValues;
 }
 @property (nonatomic, strong) IBOutlet UIPickerView *status;
+@property (nonatomic, strong) IBOutlet UIButton *addExerciseButton;
 
 @end
