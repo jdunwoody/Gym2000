@@ -36,24 +36,39 @@
 //    [self.view addSubview:tableViewController.tableView];
     
     exercises = [[NSArray alloc] initWithObjects:@"O/H", @"Fly", @"Press up", @"Sit up", @"Burpee", @"Star jump", @"Bicup curls", @"Squats", @"Other", nil];
-    bodyPart = [[NSArray alloc] initWithObjects:@"Bicep", @"Tricep", @"Shoulder", @"Abs", @"Thigh", @"Hamstring", @"Calf", nil];
+    bodyPart = [[NSArray alloc] initWithObjects:@"Full body",@"Legs",@"Arms",@"Core",@"Bicep", @"Tricep", @"Shoulder", @"Abs", @"Thigh", @"Hamstring", @"Calf", nil];
     intensity = [[NSArray alloc] initWithObjects:@"Aerobic Light", @"Aerobic Medium", @"Aerobic Intense", @"Anaerobic Light", @"Anaerobic Medium", @"Anaerobic Intense", nil];
-
-    NSMutableArray *repsTemp = [[NSMutableArray alloc] init];
+    
+    sets = [[NSMutableArray alloc] init];
+    for (NSUInteger i = 0; i < 20; i++) {
+        [sets addObject:[NSString stringWithFormat:@"%d", i]];
+    }
+   
+    reps = [[NSMutableArray alloc] init];
     
     for (NSUInteger i = 0; i < 20; i++) {
-        [repsTemp addObject:[NSString stringWithFormat:@"%d", i]];
+        [reps addObject:[NSString stringWithFormat:@"%d", i]];
     }
     for (NSUInteger i = 25; i <= 50; i+=5) {
-        [repsTemp addObject:[NSString stringWithFormat:@"%d", i]];
+        [reps addObject:[NSString stringWithFormat:@"%d", i]];
     }
     
-    reps = [NSArray arrayWithArray:repsTemp];
-
     rest = [NSMutableArray arrayWithObjects:@"10s", @"20s", @"30s", nil];
     for (NSUInteger i = 1; i <= 20; i++) {
         [rest addObject:[NSString stringWithFormat:@"%dmin", i]];
     }
+
+    weight = [[NSMutableArray alloc]init ];
+    for (NSUInteger i = 1; i <= 20; i++) {
+        [weight addObject:[NSString stringWithFormat:@"%dkg", i]];
+    }
+    for (NSUInteger i = 25; i < 50; i+=5) {
+        [weight addObject:[NSString stringWithFormat:@"%dkg", i]];
+    }
+    for (NSUInteger i = 50; i <= 150; i+=10) {
+        [weight addObject:[NSString stringWithFormat:@"%dkg", i]];
+    }
+    
 }
 
 - (void)viewDidUnload
@@ -129,7 +144,7 @@
         
         [[cell exercisePicker] setDelegate:self];
         [[cell exercisePicker] setDataSource:self];
-
+        
         
         //        NSString *valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
 //        [[cell category] setText: @"exercise category"];
@@ -187,16 +202,38 @@
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 5;
+    return 7;
+}
+
+//UIViewAutoresizingFlexibleWidth
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    switch(component) {
+        case 0: return 150.0f;
+        case 1: return 44.0f;
+        case 2: return 150.0f;
+        case 3: return 44.0f;
+        case 4: return 88.0f;
+        case 5: return 200.0f;
+        case 6: return 88.0f;
+        default: return 22.0f;
+    }
+    
+    //NOT REACHED
+    return 22;
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     switch (component) {
-        case 4:
+        case 6:
+            return weight.count;
+        case 5:
             return intensity.count;
-        case 3:
+        case 4:
             return rest.count;
+        case 3:
+            return sets.count;
         case 2:
             return bodyPart.count;
         case 1:
@@ -210,10 +247,14 @@
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     switch (component) {
-        case 4:
+        case 6:
+            return [weight objectAtIndex:row];
+        case 5:
             return [intensity objectAtIndex:row];
-        case 3:
+        case 4:
             return [rest objectAtIndex:row];
+        case 3:
+            return [sets objectAtIndex:row];
         case 2:
             return [bodyPart objectAtIndex:row];
         case 1:
@@ -224,6 +265,7 @@
     }
 }
 
+ 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
 {
     if ([segue.identifier isEqualToString:@"AddExercise"]) {

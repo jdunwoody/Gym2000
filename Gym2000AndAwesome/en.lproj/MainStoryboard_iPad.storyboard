@@ -132,10 +132,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="217"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="s4B-nM-rXn">
-                                            <rect key="frame" x="826" y="98" width="118" height="23"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </slider>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="djb-TW-uym">
                                             <rect key="frame" x="0.0" y="87" width="207" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -145,7 +141,7 @@
                                             </segments>
                                         </segmentedControl>
                                         <pickerView contentMode="scaleToFill" id="gmq-3a-NyY">
-                                            <rect key="frame" x="215" y="0.0" width="605" height="216"/>
+                                            <rect key="frame" x="215" y="0.0" width="809" height="216"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <outlet property="dataSource" destination="P13-3z-SJE" id="She-gw-qso"/>

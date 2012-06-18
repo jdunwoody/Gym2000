@@ -13,7 +13,9 @@
 @interface ExerciseTableViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate, AddExerciseViewControllerDelegate> {
     UIPickerView *exercisePicker;
     NSArray *exercises;
-    NSArray *reps;
+    NSMutableArray *reps;
+    NSMutableArray *sets;
+    NSMutableArray *weight;
     NSArray *bodyPart;
     NSArray *intensity;
     NSMutableArray *rest;

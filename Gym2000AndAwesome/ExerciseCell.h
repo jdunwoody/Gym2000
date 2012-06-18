@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *exerciseLabel;
 @property (nonatomic, strong) IBOutlet UIPickerView *exercisePicker;
+
 //@property (nonatomic, strong) IBOutlet UIPickerView *repsPicker;
 //@property (nonatomic, strong) IBOutlet UIPickerView *bodyPartPicker;
 
