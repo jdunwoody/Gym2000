@@ -16,6 +16,7 @@
     @property NSString *type;
     @property NSString *category;
     @property NSString *restBetween;
+    @property BOOL isAdd;
     
 //    - (id)initWithLabel: (NSString *)label;
 

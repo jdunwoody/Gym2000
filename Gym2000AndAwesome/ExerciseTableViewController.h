@@ -15,6 +15,8 @@
     NSArray *exercises;
     NSArray *reps;
     NSArray *bodyPart;
+    NSArray *intensity;
+    NSMutableArray *rest;
 }
 
 @property (strong, nonatomic) ExerciseDataController *dataController;

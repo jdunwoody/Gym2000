@@ -34,6 +34,11 @@
     exercise.name = @"Push up";
     [self.exercises addObject:exercise];
     
+    exercise = [[Exercise alloc] init];
+    exercise.category = @"None";
+    exercise.name = @"Add exercise";
+    exercise.isAdd = true;
+    [self.exercises addObject:exercise];
     
 //    NSMutableArray *exerciseList = [[NSMutableArray alloc] initWithObjects:@"Push up", @"Sit up", @"Burpee", @"Star jump", @"Bicup curls", @"Squats", @"Other", nil];
 //    self.exercises = exerciseList;

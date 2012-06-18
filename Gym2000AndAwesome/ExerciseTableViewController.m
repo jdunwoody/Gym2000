@@ -25,6 +25,9 @@
 {
     [super viewDidLoad];
 
+    self.title = @"Exercises";
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 //    self.slideNavigationViewController.delegate = self;
 //    self.slideNavigationViewController.dataSource = self;
 
@@ -32,21 +35,26 @@
     
 //    [self.view addSubview:tableViewController.tableView];
     
-//    exercises = [[NSArray alloc] initWithObjects:@"Push up", @"Sit up", @"Burpee", @"Star jump", @"Bicup curls", @"Squats", @"Other", nil];
-//    bodyPart = [[NSArray alloc] initWithObjects:@"Bicep", @"Tricep", @"Shoulder", @"Abs", @"Thigh", @"Hamstring", @"Calf", nil];
-//
-//    NSMutableArray *repsTemp = [[NSMutableArray alloc] init];
-//    
-//    for (NSUInteger i = 0; i < 20; i++) {
-//        [repsTemp addObject:[NSString stringWithFormat:@"%d", i]];
-//    }
-//    for (NSUInteger i = 25; i <= 50; i+=5) {
-//        [repsTemp addObject:[NSString stringWithFormat:@"%d", i]];
-//    }
-//    
-//    reps = [NSArray arrayWithArray:repsTemp];
-}
+    exercises = [[NSArray alloc] initWithObjects:@"O/H", @"Fly", @"Press up", @"Sit up", @"Burpee", @"Star jump", @"Bicup curls", @"Squats", @"Other", nil];
+    bodyPart = [[NSArray alloc] initWithObjects:@"Bicep", @"Tricep", @"Shoulder", @"Abs", @"Thigh", @"Hamstring", @"Calf", nil];
+    intensity = [[NSArray alloc] initWithObjects:@"Aerobic Light", @"Aerobic Medium", @"Aerobic Intense", @"Anaerobic Light", @"Anaerobic Medium", @"Anaerobic Intense", nil];
 
+    NSMutableArray *repsTemp = [[NSMutableArray alloc] init];
+    
+    for (NSUInteger i = 0; i < 20; i++) {
+        [repsTemp addObject:[NSString stringWithFormat:@"%d", i]];
+    }
+    for (NSUInteger i = 25; i <= 50; i+=5) {
+        [repsTemp addObject:[NSString stringWithFormat:@"%d", i]];
+    }
+    
+    reps = [NSArray arrayWithArray:repsTemp];
+
+    rest = [NSMutableArray arrayWithObjects:@"10s", @"20s", @"30s", nil];
+    for (NSUInteger i = 1; i <= 20; i++) {
+        [rest addObject:[NSString stringWithFormat:@"%dmin", i]];
+    }
+}
 
 - (void)viewDidUnload
 {
@@ -112,26 +120,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSIndexPath *selectedIndex = [tableView indexPathForSelectedRow];
+    Exercise *exercise = [self.dataController objectInListAtIndex:indexPath.row];
     
-//    if (indexPath.row == 0) {
-//        static NSString *CellIdentifier = @"CurrentExerciseCell";
-//        ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//        
-//        NSString *valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
-//        
-//        [[cell exerciseLabel] setText:valueAtIndex];
-//        
-//        [[cell exercisePicker] setDelegate:self];
-//        [[cell exercisePicker] setDataSource:self];
-//        
-//        return cell;    
-//        
-//    } else {
-        static NSString *CellIdentifier = @"InactiveExerciseCell";
-        id c = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        InactiveExerciseCell *cell = c;
-        Exercise *exercise = [self.dataController objectInListAtIndex:indexPath.row];
+ 
+    if (exercise.isAdd) {
+        static NSString *CellIdentifier = @"AddExerciseCell";
+        ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        [[cell exercisePicker] setDelegate:self];
+        [[cell exercisePicker] setDataSource:self];
+
+        
+        //        NSString *valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+//        [[cell category] setText: @"exercise category"];
+//        [[cell exerciseLabel] setText:@"exercise label"];
+        
+        return cell;    
+        
+    } else {
+        static NSString *CellIdentifier = @"ExerciseCell";
+        InactiveExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+      
+        //        Exercise *exercise = [self.dataController objectInListAtIndex:indexPath.row];
         
         [[cell category] setText: exercise.category];
         [[cell name] setText: exercise.name];
@@ -148,17 +158,21 @@
 //        
         
         return cell;
-//    }
+
+        //    NSIndexPath *selectedIndex = [tableView indexPathForSelectedRow];
+
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-//    if (indexPath.row == 0) {
-//        return tableView.rowHeight;
-//    } else {
+    Exercise *exercise = [self.dataController objectInListAtIndex:indexPath.row];
+ 
+    if (exercise.isAdd) {
+        return tableView.rowHeight;
+    } else {
         return 62;
-//    }
-        
+    }
 }
 
 // [pickerView reloadComponent]
@@ -169,16 +183,20 @@
     return NO;
 }
 
-// Date picker functions
+// Picker functions
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 3;
+    return 5;
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     switch (component) {
+        case 4:
+            return intensity.count;
+        case 3:
+            return rest.count;
         case 2:
             return bodyPart.count;
         case 1:
@@ -192,6 +210,10 @@
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     switch (component) {
+        case 4:
+            return [intensity objectAtIndex:row];
+        case 3:
+            return [rest objectAtIndex:row];
         case 2:
             return [bodyPart objectAtIndex:row];
         case 1:
