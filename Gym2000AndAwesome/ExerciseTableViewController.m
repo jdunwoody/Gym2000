@@ -10,7 +10,7 @@
 #import "ExerciseCell.h"
 #import "InactiveExerciseCell.h"
 #import "Exercise.h"
-#import "AddExerciseViewController.h"
+#import "AddTypeViewController.h"
 
 @interface ExerciseTableViewController ()
 
@@ -269,17 +269,14 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
 {
     if ([segue.identifier isEqualToString:@"AddExercise"]) {
-        AddExerciseViewController *destination = (AddExerciseViewController *)segue.destinationViewController;
+        AddTypeViewController *destination = (AddTypeViewController *)segue.destinationViewController;
 
         destination.addExerciseViewControllerDelegate = self;
+        
 //        PickerTestViewController *asker = (PickerTestViewController *) segue.destinationViewController;
 //        asker.delegate = self;
-        
 //        asker.question = @"What do you want your label to say?";
-//        
 //        asker.answer = @"Label text";
-        
-        
     }
 
     
@@ -297,7 +294,7 @@
     
 }
 
-- (void)addItemViewController:(AddExerciseViewController *)controller didFinishEnteringItem:(NSString *)item
+- (void)addItemViewController:(AddTypeViewController *)controller didFinishEnteringItem:(NSString *)item
 {
     NSLog(@"This was returned from AddExerciseViewController %@",item);
 }

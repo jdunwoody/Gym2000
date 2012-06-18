@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class AddExerciseViewController;
+@class AddTypeViewController;
 
 @protocol AddExerciseViewControllerDelegate <NSObject>
-- (void)addItemViewController:(AddExerciseViewController *)controller didFinishEnteringItem:(NSString *)item;
+- (void)addItemViewController:(AddTypeViewController *)controller didFinishEnteringItem:(NSString *)item;
 @end
 
-@interface AddExerciseViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+@interface AddTypeViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
     UIPickerView *status;   
     NSArray *statusValues;
 }
@@ -22,6 +22,7 @@
 @property (nonatomic, strong) IBOutlet UIPickerView *status;
 @property (nonatomic, weak) id <AddExerciseViewControllerDelegate> addExerciseViewControllerDelegate;
 
-- (IBAction)addExerciseButton:(id)sender;
+- (IBAction)addTypeButton:(id)sender;
+- (IBAction)addBodyPartButton:(id)sender;
 
 @end

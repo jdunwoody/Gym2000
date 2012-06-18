@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "AddExerciseViewController.h"
+#import "AddTypeViewController.h"
 
-@interface AddExerciseViewController ()
+@interface AddTypeViewController ()
 
 @end
 
-@implementation AddExerciseViewController
+@implementation AddTypeViewController
 @synthesize addExerciseViewControllerDelegate = _addExerciseViewControllerDelegate;
 
 @synthesize status = _status;
@@ -55,7 +55,11 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    } else {
+        return YES;
+    }
 }
 
 
@@ -83,10 +87,18 @@
     return nil;
 }
 
-- (IBAction)addExerciseButton:(id)sender {
-    NSString *itemToPassBack = @"Pass this value back to ExerciseTableViewController";
+- (IBAction)addTypeButton:(id)sender {
+    NSString *itemToPassBack = @"Adding type button pressed. Pass this value back to ExerciseTableViewController";
     [self.addExerciseViewControllerDelegate addItemViewController:self didFinishEnteringItem:itemToPassBack];
     
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)addBodyPartButton:(id)sender {
+    NSString *itemToPassBack = @"Adding body part button pressed. Pass this value back to ExerciseTableViewController";
+    [self.addExerciseViewControllerDelegate addItemViewController:self didFinishEnteringItem:itemToPassBack];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

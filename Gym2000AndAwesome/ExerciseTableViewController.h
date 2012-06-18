@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ExerciseDataController.h"
-#import "AddExerciseViewController.h"
+#import "AddTypeViewController.h"
 
 @interface ExerciseTableViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate, AddExerciseViewControllerDelegate> {
     UIPickerView *exercisePicker;
