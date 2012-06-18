@@ -12,13 +12,12 @@
 
 @synthesize name = _name;
 @synthesize weights = _weights;
-@synthesize restBetween = _restBetween;
+@synthesize rest = _rest;
 @synthesize type = _type;
 @synthesize sets = _sets;
 @synthesize reps = _reps;
 @synthesize category = _category;
 @synthesize isAdd = _isAdd;
-@synthesize isRest = _isRest;
 
 //- (id)initWithLabel: (NSString *)label 
 //{

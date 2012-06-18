@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExerciseCell : UITableViewCell
+@interface AddExerciseCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *exerciseLabel;
 @property (nonatomic, strong) IBOutlet UIPickerView *exercisePicker;

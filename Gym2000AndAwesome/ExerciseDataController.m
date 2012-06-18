@@ -27,23 +27,32 @@
     Exercise *exercise = [[Exercise alloc] init];
     exercise.category = @"Individual";
     exercise.name = @"Air Squat";
-    [self.exercises addObject:exercise];
-   
-    exercise = [[Exercise alloc] init];
-    exercise.category = @"Rest";
-    exercise.name = @"Rest";
-    exercise.isRest = true;
+    exercise.rest = @"10sec";
     [self.exercises addObject:exercise];
    
     exercise = [[Exercise alloc] init];
     exercise.category = @"Super set";
     exercise.name = @"Push up";
+    exercise.rest = nil;
+    [self.exercises addObject:exercise];
+  
+    exercise = [[Exercise alloc] init];
+    exercise.category = @"Super set";
+    exercise.name = @"Push up";
+    exercise.rest = @"30sec";
+    [self.exercises addObject:exercise];
+  
+    exercise = [[Exercise alloc] init];
+    exercise.category = @"Super set";
+    exercise.name = @"Push up";
+    exercise.rest = @"15sec";
     [self.exercises addObject:exercise];
     
     exercise = [[Exercise alloc] init];
     exercise.category = @"None";
     exercise.name = @"Add exercise";
     exercise.isAdd = true;
+    exercise.rest = @"10sec";
     [self.exercises addObject:exercise];
     
 //    NSMutableArray *exerciseList = [[NSMutableArray alloc] initWithObjects:@"Push up", @"Sit up", @"Burpee", @"Star jump", @"Bicup curls", @"Squats", @"Other", nil];

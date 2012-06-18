@@ -30,5 +30,6 @@
 @synthesize name = name;
 @synthesize reps = _reps;
 @synthesize bodyPart = _bodyPart;
+@synthesize rest = _rest;
 
 @end

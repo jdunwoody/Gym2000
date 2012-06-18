@@ -1,16 +1,19 @@
 //
-//  RestCellCell.m
+//  ExerciseCell.m
 //  Gym2000AndAwesome
 //
-//  Created by James on 18/06/12.
+//  Created by James on 10/06/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "RestCell.h"
+#import "AddExerciseCell.h"
 
-@implementation RestCell
+@implementation AddExerciseCell
 
-@synthesize amount = _amount;
+@synthesize exerciseLabel = _exerciseLabel;
+@synthesize exercisePicker = _exercisePicker;
+//@synthesize repsPicker = _repsPicker;
+//@synthesize bodyPartPicker = _bodyPartPicker;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		1A3A1D36158617EA00978DD7 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3A1D35158617EA00978DD7 /* Exercise.m */; };
 		1A47A0901585DF3F00203A81 /* InactiveExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A47A08F1585DF3F00203A81 /* InactiveExerciseCell.m */; };
-		1A6E902E158F3CC900F400EC /* RestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6E902D158F3CC900F400EC /* RestCell.m */; };
 		1AACE9F0158760C800B9B2DF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AACE9EE158760C800B9B2DF /* MainStoryboard_iPad.storyboard */; };
 		1ABEF4F6158C0EA700BBD092 /* MWFSlideNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEF4F5158C0EA700BBD092 /* MWFSlideNavigationViewController.m */; };
 		1ADE90C615846FC2005B0AF1 /* AddTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90C515846FC2005B0AF1 /* AddTypeViewController.m */; };
 		1ADE90CE15847A2E005B0AF1 /* ExerciseDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90CD15847A2E005B0AF1 /* ExerciseDataController.m */; };
-		1ADE90D515849FA3005B0AF1 /* ExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90D415849FA3005B0AF1 /* ExerciseCell.m */; };
+		1ADE90D515849FA3005B0AF1 /* AddExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90D415849FA3005B0AF1 /* AddExerciseCell.m */; };
 		1AF3455615835B7700EB1EA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF3455515835B7700EB1EA5 /* UIKit.framework */; };
 		1AF3455815835B7700EB1EA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF3455715835B7700EB1EA5 /* Foundation.framework */; };
 		1AF3455A15835B7700EB1EA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF3455915835B7700EB1EA5 /* CoreGraphics.framework */; };
@@ -32,8 +31,6 @@
 		1A3A1D35158617EA00978DD7 /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
 		1A47A08E1585DF3F00203A81 /* InactiveExerciseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InactiveExerciseCell.h; sourceTree = "<group>"; };
 		1A47A08F1585DF3F00203A81 /* InactiveExerciseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InactiveExerciseCell.m; sourceTree = "<group>"; };
-		1A6E902C158F3CC900F400EC /* RestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestCell.h; sourceTree = "<group>"; };
-		1A6E902D158F3CC900F400EC /* RestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestCell.m; sourceTree = "<group>"; };
 		1AACE9EF158760C800B9B2DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		1ABEF4F4158C0EA700BBD092 /* MWFSlideNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFSlideNavigationViewController.h; sourceTree = "<group>"; };
 		1ABEF4F5158C0EA700BBD092 /* MWFSlideNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFSlideNavigationViewController.m; sourceTree = "<group>"; };
@@ -41,8 +38,8 @@
 		1ADE90C515846FC2005B0AF1 /* AddTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTypeViewController.m; sourceTree = "<group>"; };
 		1ADE90CC15847A2E005B0AF1 /* ExerciseDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseDataController.h; sourceTree = "<group>"; };
 		1ADE90CD15847A2E005B0AF1 /* ExerciseDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDataController.m; sourceTree = "<group>"; };
-		1ADE90D315849FA3005B0AF1 /* ExerciseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseCell.h; sourceTree = "<group>"; };
-		1ADE90D415849FA3005B0AF1 /* ExerciseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseCell.m; sourceTree = "<group>"; };
+		1ADE90D315849FA3005B0AF1 /* AddExerciseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExerciseCell.h; sourceTree = "<group>"; };
+		1ADE90D415849FA3005B0AF1 /* AddExerciseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExerciseCell.m; sourceTree = "<group>"; };
 		1AF3455115835B7700EB1EA5 /* Gym2000AndAwesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gym2000AndAwesome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF3455515835B7700EB1EA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1AF3455715835B7700EB1EA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,12 +113,10 @@
 				1AF3456D15835B7800EB1EA5 /* ExerciseTableViewController.h */,
 				1AF3456E15835B7800EB1EA5 /* ExerciseTableViewController.m */,
 				1AF3455C15835B7700EB1EA5 /* Supporting Files */,
-				1ADE90C415846FC2005B0AF1 /* AddTypeViewController.h */,
-				1ADE90C515846FC2005B0AF1 /* AddTypeViewController.m */,
 				1ADE90CC15847A2E005B0AF1 /* ExerciseDataController.h */,
 				1ADE90CD15847A2E005B0AF1 /* ExerciseDataController.m */,
-				1ADE90D315849FA3005B0AF1 /* ExerciseCell.h */,
-				1ADE90D415849FA3005B0AF1 /* ExerciseCell.m */,
+				1ADE90D315849FA3005B0AF1 /* AddExerciseCell.h */,
+				1ADE90D415849FA3005B0AF1 /* AddExerciseCell.m */,
 				1A47A08E1585DF3F00203A81 /* InactiveExerciseCell.h */,
 				1A47A08F1585DF3F00203A81 /* InactiveExerciseCell.m */,
 				1A3A1D34158617EA00978DD7 /* Exercise.h */,
@@ -129,8 +124,8 @@
 				1AF4CE1C158B6E54009A2CED /* SlideySegue.h */,
 				1AF4CE1D158B6E54009A2CED /* SlideySegue.m */,
 				1AF3456715835B7700EB1EA5 /* MainStoryboard_iPhone.storyboard */,
-				1A6E902C158F3CC900F400EC /* RestCell.h */,
-				1A6E902D158F3CC900F400EC /* RestCell.m */,
+				1ADE90C415846FC2005B0AF1 /* AddTypeViewController.h */,
+				1ADE90C515846FC2005B0AF1 /* AddTypeViewController.m */,
 			);
 			path = Gym2000AndAwesome;
 			sourceTree = "<group>";
@@ -215,13 +210,12 @@
 				1AF3456F15835B7800EB1EA5 /* ExerciseTableViewController.m in Sources */,
 				1ADE90C615846FC2005B0AF1 /* AddTypeViewController.m in Sources */,
 				1ADE90CE15847A2E005B0AF1 /* ExerciseDataController.m in Sources */,
-				1ADE90D515849FA3005B0AF1 /* ExerciseCell.m in Sources */,
+				1ADE90D515849FA3005B0AF1 /* AddExerciseCell.m in Sources */,
 				1A47A0901585DF3F00203A81 /* InactiveExerciseCell.m in Sources */,
 				1A3A1D36158617EA00978DD7 /* Exercise.m in Sources */,
 				1AF4CE15158B38EB009A2CED /* MainViewController.m in Sources */,
 				1AF4CE1E158B6E54009A2CED /* SlideySegue.m in Sources */,
 				1ABEF4F6158C0EA700BBD092 /* MWFSlideNavigationViewController.m in Sources */,
-				1A6E902E158F3CC900F400EC /* RestCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

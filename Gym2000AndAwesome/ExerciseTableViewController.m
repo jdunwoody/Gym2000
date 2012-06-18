@@ -7,11 +7,10 @@
 //
 
 #import "ExerciseTableViewController.h"
-#import "ExerciseCell.h"
+#import "AddExerciseCell.h"
 #import "InactiveExerciseCell.h"
 #import "Exercise.h"
 #import "AddTypeViewController.h"
-#import "RestCell.h"
 
 @interface ExerciseTableViewController ()
 
@@ -141,11 +140,10 @@
  
     if (exercise.isAdd) {
         static NSString *CellIdentifier = @"AddExerciseCell";
-        ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        AddExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
         [[cell exercisePicker] setDelegate:self];
         [[cell exercisePicker] setDataSource:self];
-        
         
         //        NSString *valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
 //        [[cell category] setText: @"exercise category"];
@@ -153,13 +151,6 @@
         
         return cell;    
        
-    } else if (exercise.isRest) {
-        static NSString *CellIdentifier = @"RestCell";
-        RestCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        [[cell amount] setText: @"10sec"];
-         
-        return cell;    
-        
     } else {
         static NSString *CellIdentifier = @"ExerciseCell";
         InactiveExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -168,7 +159,9 @@
         
         [[cell category] setText: exercise.category];
         [[cell name] setText: exercise.name];
-//        [[cell reps] setText: [NSString stringWithFormat:@"%d" exercise.reps]];
+        [[cell rest] setText: exercise.rest];
+
+        //        [[cell reps] setText: [NSString stringWithFormat:@"%d" exercise.reps]];
 //        [[cell bodyPart] setText: exercise.bodyPart];
     
 //        [cell sizeToFit];
@@ -195,9 +188,6 @@
     if (exercise.isAdd) {
         cell.backgroundColor = [UIColor brownColor];  
     
-    } else if (exercise.isRest) {
-        cell.backgroundColor = [UIColor yellowColor];  
-        
     } else {
         cell.backgroundColor = [UIColor cyanColor];  
  
@@ -215,7 +205,8 @@
     if (exercise.isAdd) {
         return tableView.rowHeight;
     } else {
-        return 62;
+//        return 62;
+        return 92;
     }
 }
 

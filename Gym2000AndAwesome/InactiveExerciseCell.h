@@ -14,5 +14,6 @@
 @property (nonatomic, strong) IBOutlet UILabel *name;
 @property (nonatomic, strong) IBOutlet UILabel *reps;
 @property (nonatomic, strong) IBOutlet UILabel *bodyPart;
+@property (nonatomic, strong) IBOutlet UILabel *rest;
 
 @end

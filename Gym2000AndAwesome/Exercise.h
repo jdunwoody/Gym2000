@@ -15,9 +15,8 @@
     @property NSArray *weights;
     @property NSString *type;
     @property NSString *category;
-    @property NSString *restBetween;
+    @property NSString *rest;
     @property BOOL isAdd;
-    @property BOOL isRest;
 //    - (id)initWithLabel: (NSString *)label;
 
 @end
