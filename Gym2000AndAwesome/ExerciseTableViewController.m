@@ -11,6 +11,7 @@
 #import "InactiveExerciseCell.h"
 #import "Exercise.h"
 #import "AddTypeViewController.h"
+#import "RestCell.h"
 
 @interface ExerciseTableViewController ()
 
@@ -151,6 +152,13 @@
 //        [[cell exerciseLabel] setText:@"exercise label"];
         
         return cell;    
+       
+    } else if (exercise.isRest) {
+        static NSString *CellIdentifier = @"RestCell";
+        RestCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        [[cell amount] setText: @"10sec"];
+         
+        return cell;    
         
     } else {
         static NSString *CellIdentifier = @"ExerciseCell";
@@ -177,6 +185,27 @@
         //    NSIndexPath *selectedIndex = [tableView indexPathForSelectedRow];
 
     }
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Exercise *exercise = [self.dataController objectInListAtIndex:indexPath.row];
+    
+    
+    if (exercise.isAdd) {
+        cell.backgroundColor = [UIColor brownColor];  
+    
+    } else if (exercise.isRest) {
+        cell.backgroundColor = [UIColor yellowColor];  
+        
+    } else {
+        cell.backgroundColor = [UIColor cyanColor];  
+ 
+    }
+    //        [cell textColor];
+//    cell.textLabel.textColor = [UIColor brownColor];
+//    cell.backgroundColor = [UIColor lightGrayColor];
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath 

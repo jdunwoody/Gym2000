@@ -30,6 +30,12 @@
     [self.exercises addObject:exercise];
    
     exercise = [[Exercise alloc] init];
+    exercise.category = @"Rest";
+    exercise.name = @"Rest";
+    exercise.isRest = true;
+    [self.exercises addObject:exercise];
+   
+    exercise = [[Exercise alloc] init];
     exercise.category = @"Super set";
     exercise.name = @"Push up";
     [self.exercises addObject:exercise];

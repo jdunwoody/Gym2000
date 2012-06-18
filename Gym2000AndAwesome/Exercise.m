@@ -18,6 +18,7 @@
 @synthesize reps = _reps;
 @synthesize category = _category;
 @synthesize isAdd = _isAdd;
+@synthesize isRest = _isRest;
 
 //- (id)initWithLabel: (NSString *)label 
 //{
