@@ -8,7 +8,7 @@
 
 #import "ExerciseTableViewController.h"
 #import "AddExerciseCell.h"
-#import "InactiveExerciseCell.h"
+#import "ExerciseCell.h"
 #import "Exercise.h"
 #import "AddTypeViewController.h"
 
@@ -153,30 +153,27 @@
        
     } else {
         static NSString *CellIdentifier = @"ExerciseCell";
-        InactiveExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
       
-        //        Exercise *exercise = [self.dataController objectInListAtIndex:indexPath.row];
-        
-        [[cell category] setText: exercise.category];
         [[cell name] setText: exercise.name];
-        [[cell rest] setText: exercise.rest];
-
-        //        [[cell reps] setText: [NSString stringWithFormat:@"%d" exercise.reps]];
-//        [[cell bodyPart] setText: exercise.bodyPart];
-    
-//        [cell sizeToFit];
-//        cell.backgroundColor = [UIColor redColor];
-//        cell.backgroundColor = [UIColor colorWithRed:172.0/255.0 green:173.0/255.0 blue:175.0/255.0 alpha:1.0];
-//        [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionTop]
-        
-//        [[cell exercisePicker] setDelegate:self];
-//        [[cell exercisePicker] setDataSource:self];
-//        
+        [[cell reps] setText: [NSString stringWithFormat:@"%d", exercise.reps]];
+//        [[cell sets] setText: [NSString stringWithFormat:@"%d", exercise.sets]];
+        [[cell rest] setText: [NSString stringWithFormat:@"%@ Rest", exercise.rest == nil ? @"No" : exercise.rest]];
+        [[cell weights] setText: [NSString stringWithFormat:@"%dkg", exercise.weights]];
+        [[cell type] setText: exercise.isSingle ? @"Single" : @"Super"];
         
         return cell;
+        
+//        @property NSString *type;
 
+        //        Exercise *exercise = [self.dataController objectInListAtIndex:indexPath.row];
+        //        [[cell reps] setText: [NSString stringWithFormat:@"%d" exercise.reps]];
+        //        [[cell bodyPart] setText: exercise.bodyPart];
+        //        [cell sizeToFit];
+        //        cell.backgroundColor = [UIColor redColor];
+        //        cell.backgroundColor = [UIColor colorWithRed:172.0/255.0 green:173.0/255.0 blue:175.0/255.0 alpha:1.0];
+        //        [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionTop]    
         //    NSIndexPath *selectedIndex = [tableView indexPathForSelectedRow];
-
     }
 }
 

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "InactiveExerciseCell.h"
+#import "ExerciseCell.h"
 
-@implementation InactiveExerciseCell
+@implementation ExerciseCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -26,10 +26,12 @@
     // Configure the view for the selected state
 }
 
-@synthesize category = _category;
 @synthesize name = name;
 @synthesize reps = _reps;
 @synthesize bodyPart = _bodyPart;
 @synthesize rest = _rest;
+@synthesize weights = _weights;
+@synthesize type = _type;
+@synthesize intensity = _intensity;
 
 @end

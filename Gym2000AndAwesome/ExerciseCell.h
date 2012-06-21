@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface InactiveExerciseCell : UITableViewCell
+@interface ExerciseCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UILabel *category;
 @property (nonatomic, strong) IBOutlet UILabel *name;
 @property (nonatomic, strong) IBOutlet UILabel *reps;
 @property (nonatomic, strong) IBOutlet UILabel *bodyPart;
 @property (nonatomic, strong) IBOutlet UILabel *rest;
+@property (nonatomic, strong) IBOutlet UILabel *weights;
+@property (nonatomic, strong) IBOutlet UILabel *type;
+@property (nonatomic, strong) IBOutlet UILabel *intensity;
 
 @end

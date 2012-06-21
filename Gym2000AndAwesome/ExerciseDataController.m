@@ -28,31 +28,43 @@
     exercise.category = @"Individual";
     exercise.name = @"Air Squat";
     exercise.rest = @"10sec";
+    exercise.weights = [NSNumber numberWithInt:10];
+    exercise.intensity = ExerciseIntensityAnaerobicLight;
     [self.exercises addObject:exercise];
    
     exercise = [[Exercise alloc] init];
     exercise.category = @"Super set";
     exercise.name = @"Push up";
     exercise.rest = nil;
+    exercise.weights = [NSNumber numberWithInt:20];
+    exercise.intensity = ExerciseIntensityAnaerobicIntense;
+    
     [self.exercises addObject:exercise];
   
     exercise = [[Exercise alloc] init];
     exercise.category = @"Super set";
     exercise.name = @"Push up";
     exercise.rest = @"30sec";
+    exercise.weights = [NSNumber numberWithInt:110];
+    exercise.intensity = ExerciseIntensityAerobicIntense;
     [self.exercises addObject:exercise];
   
     exercise = [[Exercise alloc] init];
     exercise.category = @"Super set";
     exercise.name = @"Push up";
     exercise.rest = @"15sec";
+    exercise.weights = [NSNumber numberWithInt:1];
+    exercise.intensity = ExerciseIntensityAerobicLight;
     [self.exercises addObject:exercise];
     
     exercise = [[Exercise alloc] init];
     exercise.category = @"None";
     exercise.name = @"Add exercise";
     exercise.isAdd = true;
+    exercise.weights = [NSNumber numberWithInt:12];
+    exercise.intensity = ExerciseIntensityAerobicMedium;
     exercise.rest = @"10sec";
+    
     [self.exercises addObject:exercise];
     
 //    NSMutableArray *exerciseList = [[NSMutableArray alloc] initWithObjects:@"Push up", @"Sit up", @"Burpee", @"Star jump", @"Bicup curls", @"Squats", @"Other", nil];

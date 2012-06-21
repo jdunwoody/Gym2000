@@ -100,7 +100,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="8UY-Ou-8bd">
-                            <rect key="frame" x="0.0" y="346" width="1024" height="44"/>
+                            <rect key="frame" x="0.0" y="437" width="1024" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Caq-3f-g8g">
@@ -119,7 +119,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ExerciseCell" rowHeight="96" id="ZlE-m0-vkV" customClass="InactiveExerciseCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ExerciseCell" rowHeight="96" id="ZlE-m0-vkV" customClass="ExerciseCell">
                                 <rect key="frame" x="0.0" y="66" width="1024" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -194,16 +194,19 @@
                                 </view>
                                 <connections>
                                     <outlet property="bodyPart" destination="uFL-OI-rps" id="JZg-pb-Zbn"/>
+                                    <outlet property="intensity" destination="vFO-nW-FVD" id="abe-lp-KD7"/>
                                     <outlet property="name" destination="0hK-Em-m0x" id="bYf-eG-8bm"/>
                                     <outlet property="reps" destination="MbK-ZK-rBH" id="A81-MX-ofW"/>
                                     <outlet property="rest" destination="wGe-Qh-0wj" id="6In-fB-Max"/>
+                                    <outlet property="type" destination="4RM-qe-BH6" id="33d-WO-swz"/>
+                                    <outlet property="weights" destination="y0M-3A-GTE" id="63d-QQ-hmf"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="AddExerciseCell" rowHeight="184" id="EFK-ke-IhT" customClass="AddExerciseCell">
-                                <rect key="frame" x="0.0" y="162" width="1024" height="184"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="AddExerciseCell" rowHeight="275" id="EFK-ke-IhT" customClass="AddExerciseCell">
+                                <rect key="frame" x="0.0" y="162" width="1024" height="275"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="183"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="274"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="djb-TW-uym">
@@ -242,6 +245,42 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <state key="normal" title="New body part">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oie-90-RCS">
+                                            <rect key="frame" x="215" y="224" width="149" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Random">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="McC-SH-Rq0">
+                                            <rect key="frame" x="416" y="224" width="149" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Random">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qrD-vo-rkH">
+                                            <rect key="frame" x="605" y="224" width="149" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Random">
                                                 <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -320,6 +359,13 @@
         </scene>
     </scenes>
     <classes>
+        <class className="AddExerciseCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddExerciseCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="exerciseLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="exercisePicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
         <class className="AddTypeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTypeViewController.h"/>
             <relationships>
@@ -328,18 +374,20 @@
                 <relationship kind="outlet" name="status" candidateClass="UIPickerView"/>
             </relationships>
         </class>
-        <class className="ExerciseTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseTableViewController.h"/>
-        </class>
-        <class className="InactiveExerciseCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InactiveExerciseCell.h"/>
+        <class className="ExerciseCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="bodyPart" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="category" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="intensity" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="name" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="reps" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="rest" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="type" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="weights" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="ExerciseTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseTableViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
